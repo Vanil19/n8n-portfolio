@@ -1,6 +1,6 @@
 # n8n Portfolio
 
-Здесь я собираю свои проекты автоматизации на [n8n] https://ivan-n8n.site/workflow/APfutCqqCNZUV08h
+Здесь я собираю свои проекты автоматизации на [n8n] https://ivan-n8n.site/workflow/APfutCqqCNZUV08h (если пишет опасный сайт нажмите сведения->небезопасный сайт и у вас откроется он)
 
 ## 📌 Кейсы
 
