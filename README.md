@@ -11,6 +11,13 @@
 
 🔗 [workflow.json](case1-telegram-sheets/workflow.json)  
 📸 Скриншот:  
+<img width="1920" height="960" alt="image" src="https://github.com/user-attachments/assets/b17f70a6-02e7-4198-b166-2e119cbdbec4" /> - Скрин воркфлоу
+
+<img width="1857" height="917" alt="image" src="https://github.com/user-attachments/assets/7bd97ea1-82f7-4ae9-bfb1-a59241f16c7a" /> - Скрин гугл таблицы
+
+<img width="467" height="911" alt="image" src="https://github.com/user-attachments/assets/d98c3358-3a64-49e1-b3b2-5f7e886ad2c0" /> - Скрин тг бота
+
+
 ![Workflow Screenshot](case1-telegram-sheets/screenshot.png)
 
 ---
