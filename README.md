@@ -65,6 +65,11 @@ False → запись в Google Sheets + Telegram уведомление «Но
 
 Скриншот Workflow:
 <img width="811" height="432" alt="image" src="https://github.com/user-attachments/assets/eb2c3c74-8332-4edc-8567-88fa09c21907" />
+Скриншот Google Sheets:
+<img width="1920" height="922" alt="image" src="https://github.com/user-attachments/assets/c40eb4cf-da0e-4334-92f0-f49c53c35838" />
+Скриншот Telegramm bot:
+<img width="425" height="118" alt="image" src="https://github.com/user-attachments/assets/87b2c7ac-f5a4-4162-b491-839d28ca31de" />
+
 
 
 Пример запроса в Webhook (тест через Postman):
