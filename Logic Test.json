@@ -1,0 +1,160 @@
+{
+  "name": "Logic Test",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "825ccdfe-783e-49e3-b17b-bd385ee26a7e",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "const score = Math.floor(Math.random() * 100);\nreturn [{ leadScore: score }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "0d29cda8-7765-485d-abb0-097198e99a19",
+      "name": "Generate Lead Score"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "eee987ba-e871-4579-8363-eeb945997764",
+              "leftValue": "={{$json[\"leadScore\"]}}",
+              "rightValue": 50,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        416,
+        0
+      ],
+      "id": "ea59debf-4f86-4951-a8b1-3093581b08bf",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "chatId": "=907016284",
+        "text": "=🔥 Hot lead! Score: {{$json[\"leadScore\"]}}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        672,
+        -192
+      ],
+      "id": "badf5feb-efcc-4580-bd2a-b926f3a0bca0",
+      "name": "Send a text message",
+      "webhookId": "e0beb4a3-4512-4323-a54c-ab1880de318c",
+      "credentials": {
+        "telegramApi": {
+          "id": "ANI7OkPJjERKdkom",
+          "name": "mycompany_leads_bot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "=907016284",
+        "text": "=🧊 Cold lead. Score: {{$json[\"leadScore\"]}}\n",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        672,
+        128
+      ],
+      "id": "a0b5b4ed-fd01-4750-92ba-cbe0f473b007",
+      "name": "Send a text message1",
+      "webhookId": "89074cf3-30ec-4dce-93c3-de28e961410a",
+      "credentials": {
+        "telegramApi": {
+          "id": "ANI7OkPJjERKdkom",
+          "name": "mycompany_leads_bot"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Generate Lead Score",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Lead Score": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send a text message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "46a38995-a1e2-4fbe-8c89-287b4752c58a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f21d090e1ecccb4b592353d2f2c92778ba98b76e863958c368cd26af0ebc1886"
+  },
+  "id": "hIPVfy3NYraIHKJX",
+  "tags": []
+}
