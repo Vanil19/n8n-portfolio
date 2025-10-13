@@ -32,4 +32,10 @@ Telegram API — интерфейс общения
 
 Webhook — точка входа запросов
 
+<img width="1513" height="568" alt="image" src="https://github.com/user-attachments/assets/fce046bb-d003-4eed-b391-5be428d1107d" />
+
+
+<img width="480" height="262" alt="image" src="https://github.com/user-attachments/assets/008d8927-fd5f-4f89-b496-bad67f912d07" />
+
+
 
